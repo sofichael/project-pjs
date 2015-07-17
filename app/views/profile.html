@@ -1,0 +1,230 @@
+
+<!-- BEGIN PAGE CONTENT-->
+<div class="row-fluid profile">
+  <div class="span12">
+    <!--BEGIN TABS-->
+    <div class="tabbable tabbable-custom tabbable-full-width">
+      <ul class="nav nav-tabs">
+        <li ng-class="{'active':tab == 'account'}"><a href="javascript:;" ng-click="switchTab('account')" data-toggle="tab">个人信息</a></li>
+        <li ng-class="{'active':tab == 'profile'}"><a href="javascript:;" ng-click="switchTab('profile')" data-toggle="tab">配件商信息</a></li>
+        <li ng-class="{'active':tab == 'help'}"><a href="javascript:;" ng-click="switchTab('help')" data-toggle="tab">帮助</a></li>
+      </ul>
+      <div class="tab-content">
+        <!--个人信息-->
+        <div class="tab-pane row-fluid profile-account" ng-class="{'active':tab == 'account'}">
+          <div class="row-fluid">
+            <div class="span12">
+              <div class="span3">
+                <ul class="ver-inline-menu tabbable margin-bottom-10">
+                  <li ng-class="{'active':tabAccount == 'info'}"><a data-toggle="tab" href="javascript:;" ng-click="switchTabAccount('info')"><i class="icon-user"></i>个人信息</a>
+                    <span class="after"></span>
+                  </li>
+                  <!-- <li ng-class="{'active':tabAccount == 'picture'}"><a data-toggle="tab" href="javascript:;" ng-click="switchTabAccount('picture')"><i class="icon-picture"></i> 修改头像</a></li> -->
+                  <li ng-class="{'active':tabAccount == 'password'}"><a data-toggle="tab" href="javascript:;" ng-click="switchTabAccount('password')"><i class="icon-lock"></i> 修改密码</a></li>
+                </ul>
+              </div>
+              <div class="span9">
+                <div class="tab-content">
+                  <div id="tab_1-1" class="tab-pane" ng-class="{'active':tabAccount == 'info'}">
+                    <div style="height: auto;" id="accordion1-1" class="accordion collapse">
+                      <form>
+                        <label class="control-label">真实姓名</label>
+                        <input type="text" placeholder="" class="m-wrap span8" ng-model="account.realname"/>
+                        <label class="control-label">用户名</label>
+                        <input type="text" placeholder="" class="m-wrap span8" ng-model="account.username" disabled="true" />
+                        <label class="control-label">电话</label>
+                        <input type="text" placeholder="" class="m-wrap span8" ng-model="account.mobile" disabled="true"/>
+                        <!-- <label class="control-label">地址</label>
+                        <input type="text" placeholder="成都市武侯区" class="m-wrap span8" />
+                        <label class="control-label">Counrty</label>
+                        <div class="controls">
+                          <input type="text" class="span8 m-wrap" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source="[&quot;Alabama&quot;,&quot;Alaska&quot;,&quot;Arizona&quot;,&quot;Arkansas&quot;,&quot;US&quot;,&quot;Colorado&quot;,&quot;Connecticut&quot;,&quot;Delaware&quot;,&quot;Florida&quot;,&quot;Georgia&quot;,&quot;Hawaii&quot;,&quot;Idaho&quot;,&quot;Illinois&quot;,&quot;Indiana&quot;,&quot;Iowa&quot;,&quot;Kansas&quot;,&quot;Kentucky&quot;,&quot;Louisiana&quot;,&quot;Maine&quot;,&quot;Maryland&quot;,&quot;Massachusetts&quot;,&quot;Michigan&quot;,&quot;Minnesota&quot;,&quot;Mississippi&quot;,&quot;Missouri&quot;,&quot;Montana&quot;,&quot;Nebraska&quot;,&quot;Nevada&quot;,&quot;New Hampshire&quot;,&quot;New Jersey&quot;,&quot;New Mexico&quot;,&quot;New York&quot;,&quot;North Dakota&quot;,&quot;North Carolina&quot;,&quot;Ohio&quot;,&quot;Oklahoma&quot;,&quot;Oregon&quot;,&quot;Pennsylvania&quot;,&quot;Rhode Island&quot;,&quot;South Carolina&quot;,&quot;South Dakota&quot;,&quot;Tennessee&quot;,&quot;Texas&quot;,&quot;Utah&quot;,&quot;Vermont&quot;,&quot;Virginia&quot;,&quot;Washington&quot;,&quot;West Virginia&quot;,&quot;Wisconsin&quot;,&quot;Wyoming&quot;]" />
+                          <p class="help-block"><span class="muted">Start typing to auto complete!. E.g: US</span></p>
+                        </div>
+                        <label class="control-label">备注</label>
+                        <textarea class="span8 m-wrap" rows="3"></textarea> -->
+                        <div class="submit-btn">
+                          <a href="javascript:;" class="btn green" ng-click="!changeName && modifyRealName()" ng-disabled="changeName">保存</a>
+                          <!-- <a href="javascript:;" class="btn">取消</a> -->
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+<!--                   <div id="tab_2-2" class="tab-pane" ng-class="{'active':tabAccount == 'picture'}">
+                    <div style="height: auto;" id="accordion2-2" class="accordion collapse">
+                      <form action="#">
+                        <div class="controls">
+                          <div class="thumbnail" style="width: 291px; height: 170px;">
+                            <img src="media/image/1.jpg" alt="" />
+                          </div>
+                        </div>
+                        <div class="space10"></div>
+                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                          <div class="input-append">
+                            <div class="uneditable-input">
+                              <i class="icon-file fileupload-exists"></i>
+                              <span class="fileupload-preview"></span>
+                            </div>
+                            <span class="btn btn-file">
+                            <span class="fileupload-new">Select file</span>
+                            <span class="fileupload-exists">Change</span>
+                            <input type="file" class="default" />
+                            </span>
+                            <a href="javascript:;" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+                          </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="controls">
+                          <span class="label label-important">NOTE!</span>
+                          <span>You can write some information here..</span>
+                        </div>
+                        <div class="space10"></div>
+                        <div class="submit-btn">
+                          <a href="javascript:;" class="btn green">Submit</a>
+                          <a href="javascript:;" class="btn">Cancel</a>
+                        </div>
+                      </form>
+                    </div>
+                  </div> -->
+                  <div id="tab_3-3" class="tab-pane" ng-class="{'active':tabAccount == 'password'}">
+                    <div style="height: auto;" id="accordion3-3" class="accordion collapse">
+                      <form name="myForm">
+                        <div class="control-group" ng-class="{'success':original == true}">
+                        <label class="control-label">当前密码</label>
+                        <input type="password" class="m-wrap span8" placeholder="当前密码" name="originalPassword" ng-model="originalPassword"/>
+                        <span for="originalPassword" class="validate-inline valid ok"></span>
+                        </div>
+
+                        <div class="control-group" ng-class="{'success':password1 == true}">
+                        <label class="control-label">新密码</label>
+                        <input type="password" class="m-wrap span8" placeholder="新密码" ng-model="password"/>
+                        <span for="password" class="validate-inline valid ok"></span>
+                        </div>
+
+                        <div class="control-group" ng-class="{'success':rePassword1 == true}">
+                        <label class="control-label">再次输入密码</label>
+                        <input type="password" class="m-wrap span8" placeholder="再次输入密码" ng-model="rePassword"/>
+                        <span for="rePassword" class="validate-inline valid ok"></span>
+                        </div>
+                        <div class="submit-btn">
+                          <a href="javascript:;" class="btn green" ng-click="!changePwd && changePassword()" ng-disabled="changePwd">更改</a>
+                          <!-- <a href="javascript:;" class="btn">取消</a> -->
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--end span9-->
+            </div>
+          </div>
+        </div>
+        <!--end 个人信息-->
+        <!-- 配件商信息 -->
+        <div class="tab-pane profile-classic row-fluid" ng-class="{'active':tab == 'profile'}">
+          <div class="span3"><img ng-src="{{accountExtra.image || 'media/image/profile-img.png'}}" alt="" /></div>
+          <ul class="unstyled span9">
+            <li><span><i class="icon-home"></i>维修厂名称：</span> {{accountExtra.name}}</li>
+            <li><span><i class=" icon-map-marker"></i>地址：</span> {{accountExtra.address}}</li>
+            <li><span><i class="icon-user"></i>联系人：</span> {{accountExtra.contact}}</li>
+            <li><span><i class="icon-comment"></i>电话：</span> {{accountExtra.contact_mobile}} / {{accountExtra.contact_number}} </li>
+          </ul>
+        </div>
+        <!--end 配件商信息-->
+        <!-- 帮助 -->
+        <div class="tab-pane row-fluid" id="tab_1_3" ng-class="{'active':tab == 'help'}">
+          <div class="row-fluid">
+            <div class="span12">
+              <div class="span3">
+                <ul class="ver-inline-menu tabbable margin-bottom-10">
+                  <li ng-class="{'active':tabHelp === 'about'}"><a data-toggle="tab" href="javascript:;" ng-click="switchTabHelp('about')"><i class="icon-briefcase"></i>关于微配</a>
+                    <span class="after"></span>
+                  </li>
+                  <li ng-class="{'active':tabHelp === 'questions'}"><a data-toggle="tab" href="javascript:;" ng-click="switchTabHelp('questions')"><i class="icon-group"></i> 常见问题</a></li>
+                </ul>
+              </div>
+              <div class="span9">
+                <div class="tab-content">
+                  <div id="tab_1" class="tab-pane" ng-class="{'active':tabHelp === 'about'}">
+                    <div style="height: auto;" id="accordion1" class="accordion collapse">
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a ng-href="javascript:void(0)" data-toggle="collapse" class="accordion-toggle collapsed" ng-click="switchCollapse1('item_1_1')">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry ?
+                          </a>
+                        </div>
+                        <div class="accordion-body collapse animated" ng-class="{'in': collapse1 === 'item_1_1'}">
+                          <div class="accordion-inner">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a ng-href="javascript:void(0)" data-toggle="collapse" class="accordion-toggle collapsed" ng-click="switchCollapse1('item_1_2')">
+                          Pariatur cliche reprehenderit enim eiusmod highr brunch ?
+                          </a>
+                        </div>
+                        <div class="accordion-body collapse animated" ng-class="{'in': collapse1 === 'item_1_2'}">
+                          <div class="accordion-inner">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a ng-href="javascript:void(0)" data-toggle="collapse" class="accordion-toggle collapsed" ng-click="switchCollapse1('item_1_3')">
+                          Food truck quinoa nesciunt laborum eiusmod nim eiusmod high life accusamus  ?
+                          </a>
+                        </div>
+                        <div class="accordion-body collapse animated" ng-class="{'in': collapse1 === 'item_1_3'}">
+                          <div class="accordion-inner">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="tab_3" class="tab-pane" ng-class="{'active':tabHelp === 'questions'}">
+                    <div style="height: auto;" class="accordion collapse">
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a ng-href="javascript:void(0)" data-toggle="collapse" class="accordion-toggle collapsed" ng-click="switchCollapse2('item_2_1')">
+                          Cliche reprehenderit, enim eiusmod ?
+                          </a>
+                        </div>
+                        <div class="accordion-body collapse animated" ng-class="{'in': collapse2 ==='item_2_1'}">
+                          <div class="accordion-inner">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a ng-href="javascript:void(0)" data-toggle="collapse" class="accordion-toggle collapsed" ng-click="switchCollapse2('item_2_2')">
+                          Pariatur skateboard dolor brunch ?
+                          </a>
+                        </div>
+                        <div class="accordion-body collapse" ng-class="{'in': collapse2 ==='item_2_2'}">
+                          <div class="accordion-inner">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--end span9-->
+            </div>
+          </div>
+        </div>
+        <!--end 帮助-->
+      </div>
+    </div>
+    <!--END TABS-->
+  </div>
+</div>
+<!-- END PAGE CONTENT-->
+
+<!-- <script type="text/javascript" src="media/js/bootstrap-fileupload.js"></script> -->
