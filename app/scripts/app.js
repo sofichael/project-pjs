@@ -45,9 +45,7 @@ var app = angular.module('WPAPP', [
 }).service('Configuration', function() {
         if (window.location.host.match(/pjs\.weipei\.cc/)){
             return this.API = { BASE_URL:'http://api.weipei.cc/v1/'};
-        } else if(window.location.host.match(/localhost/) || window.location.host.match(/192\.168\./)){
-            return this.API = { BASE_URL:'http://api.dev.weipei.cc/dev/v1/'};
-        }else{
+        } else{
             return this.API = { BASE_URL:'http://api.dev.weipei.cc/dev/v1/'};
         }
 }).config(function ($httpProvider) {
