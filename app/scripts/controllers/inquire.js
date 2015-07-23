@@ -78,7 +78,7 @@ app.controller('InquireCtrl', function ($scope,AdminService,dialogs,sharedServic
      */
     if ($scope.accessToken !== undefined) {
         AdminService.accessoryShopQuotationSheetLists($scope,$scope.accessToken,$scope.limit,$scope.offset,false,function (result) {
-            if (result.quotation_sheet_lists.length === 0) {
+            if (result.quotation_sheet_lists === null || result.quotation_sheet_lists.length === 0) {
                 $scope.msg = result.error_msg || '暂无维修厂询价！';
                 launch($scope,dialogs,'notify');
             } else{
