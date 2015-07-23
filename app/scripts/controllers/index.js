@@ -40,7 +40,7 @@ app.controller('IndexCtrl', function ($scope,AdminService,sharedService,dialogs,
           unblockUI(angular.element('.page-container .container-fluid'));
           $scope.msg = result.error_msg || '报价失败';
           launch($scope,dialogs,'notify');
-          $window.location.href = '#/inquire';
+          // $window.location.href = '#/inquire';
     }else if(result.error_code === 603 || result.error_code === 401){
           $scope.msg = result.error_msg || '登录未授权，请重新登录！';
           launch($scope,dialogs,'login');
