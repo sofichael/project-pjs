@@ -48,6 +48,7 @@ app.controller('IndexCtrl', function ($scope,AdminService,sharedService,dialogs,
           $scope.msg = typeof result === 'object' ? result.error_msg || '发生异常，请联系管理员' : result || '发生异常，请联系管理员';
           launch($scope,dialogs,'notify');
     }
+    unblockUI(angular.element('.page-container .container-fluid'));
   });
 
 
