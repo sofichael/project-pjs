@@ -43,7 +43,7 @@ var app = angular.module('WPAPP', [
         .setStorageCookie(30, '/')
         .setNotify(true, true);
 }).service('Configuration', function() {
-        if (window.location.host.match(/pjs\.weipei\.cc/)){
+        if (window.location.host.match(//)){
             return this.API = { BASE_URL:'http://'};
         } else{
             return this.API = { BASE_URL:'http://'};
