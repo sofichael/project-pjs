@@ -44,9 +44,9 @@ var app = angular.module('WPAPP', [
         .setNotify(true, true);
 }).service('Configuration', function() {
         if (window.location.host.match(/pjs\.weipei\.cc/)){
-            return this.API = { BASE_URL:'http://api.weipei.cc/v1/'};
+            return this.API = { BASE_URL:'http://'};
         } else{
-            return this.API = { BASE_URL:'http://api.dev.weipei.cc/dev/v1/'};
+            return this.API = { BASE_URL:'http://'};
         }
 }).config(function ($httpProvider) {
         $httpProvider.defaults.transformRequest = function(obj){
@@ -71,5 +71,4 @@ var app = angular.module('WPAPP', [
         };
 }).run(function($http,sharedService) {
         $http.defaults.headers.common.Authorization = sharedService.getCookie('token');
-        // $http.defaults.headers.common.Authorization = 'b84f83b0abaa5f90b25652e98b763def16169d79';
 });
